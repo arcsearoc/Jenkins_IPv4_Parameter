@@ -1,0 +1,17 @@
+<j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form">
+  <j:set var="id" value="${h.generateId()}"/>
+  <f:entry title="${parameter.name}" description="${parameter.description}">
+    <div>
+      <j:set var="defaultSegments" value="${parameter.getDefaultSegments()}"/>
+      <input type="hidden" name="name" value="${parameter.name}" />
+      <input type="text" name="octet1" value="${defaultSegments[0]}" size="3" maxlength="3" style="text-align:center;"
+             checkUrl="'${rootURL}/descriptor/io.jenkins.plugins.ipv4parameter.IPv4ParameterDefinition/checkOctet?value='+this.value" />.
+      <input type="text" name="octet2" value="${defaultSegments[1]}" size="3" maxlength="3" style="text-align:center;"
+             checkUrl="'${rootURL}/descriptor/io.jenkins.plugins.ipv4parameter.IPv4ParameterDefinition/checkOctet?value='+this.value" />.
+      <input type="text" name="octet3" value="${defaultSegments[2]}" size="3" maxlength="3" style="text-align:center;"
+             checkUrl="'${rootURL}/descriptor/io.jenkins.plugins.ipv4parameter.IPv4ParameterDefinition/checkOctet?value='+this.value" />.
+      <input type="text" name="octet4" value="${defaultSegments[3]}" size="3" maxlength="3" style="text-align:center;"
+             checkUrl="'${rootURL}/descriptor/io.jenkins.plugins.ipv4parameter.IPv4ParameterDefinition/checkOctet?value='+this.value" />
+    </div>
+  </f:entry>
+</j:jelly>
