@@ -61,6 +61,12 @@ The built plugin (`.hpi` file) will be available in the `target/` directory.
 3. Configure the parameter name and default value
 4. The parameter will validate IPv4 address format during build execution
 
+![Add Parameter](Add%20Parameter.png)
+
+![Add Parameter 2](Add%20Parameter%202.png)
+
+![Build with Parameters](Build%20with%20Parameters.png)
+
 ## Development
 
 This project follows standard Jenkins plugin development practices:
